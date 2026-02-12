@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #3780ba;
+  --color-primary-shadow: rgba(55, 128, 186, 0.815);
+}
+
 /* CSS Reset / Starter Styles */
 /* *, *::before, *::after {
   box-sizing: border-box;
