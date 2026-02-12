@@ -1,0 +1,64 @@
+.nav-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3780ba;
+  transition: width 0.3s ease;
+}
+
+/* Only show underline animation on desktop */
+@media (min-width: 768px) {
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link:hover {
+    color: #3780ba;
+  }
+}
+
+/* Mobile: just change color on hover */
+@media (max-width: 767px) {
+  .nav-link:hover {
+    background-color: #3780ba;
+    color: white;
+  }
+}
+
+.nav-link-active {
+  position: relative;
+  display: inline-block;
+  color: #3780ba;
+  font-weight: 600;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3780ba;
+}
+
+/* Hide underline on mobile for active link */
+@media (max-width: 767px) {
+  .nav-link-active::after {
+    display: none;
+  }
+  
+  .nav-link-active {
+    background-color: #3780ba;
+    color: white;
+  }
+}
